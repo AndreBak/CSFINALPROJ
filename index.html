@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HB Custom BBQ Grills</title>
+    <style>
+        body {
+            font-family: 'Georgia', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        h1 {
+            font-size: 3rem;
+            animation: fire 1.5s infinite;
+        }
+        @keyframes fire {
+            0% { color: #ff4500; }
+            20% { color: #ff6347; }
+            40% { color: #ff8c00; }
+            60% { color: #ffa07a; }
+            80% { color: #ff4500; }
+            100% { color: #ff4500; }
+        }
+        header .pool {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        header nav ul li {
+            margin-left: 20px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        #main {
+            position: relative;
+            height: 400px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(45deg, #ffffff, #d3d3d3, #a9a9a9, #696969, #000000);
+        }
+        #main .pool {
+            max-width: 800px;
+            position: relative;
+        }
+        #main h2 {
+            font-size: 48px;
+            margin: 0;
+            transition: background 0.5s ease;
+        }
+        #main h2:hover {
+            background: linear-gradient(45deg, #ff0000, #ff4500, #ff6347, #ff8c00, #ff4500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        #main .brown {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #8c8c8c;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        #offer {
+            padding: 50px 20px;
+            background: #f4f4f4;
+        }
+        #offer .pool {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #offer .offer {
+            text-align: center;
+            max-width: 300px;
+            margin: 20px;
+        }
+        #offer .offer img {
+            max-width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #offer .offer h3 {
+            margin-top: 15px;
+            font-size: 24px;
+        }
+        #offer .offer p {
+            font-size: 16px;
+        }
+        #previous {
+            padding: 50px 20px;
+        }
+        #previous .pool {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        #previous .previous-item {
+            margin: 20px;
+            max-width: 300px;
+            flex: 0 0 auto;
+        }
+        #previous .previous-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #testimonials {
+            padding: 50px 20px;
+            background: #f4f4f4;
+        }
+        #testimonials .pool {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        #testimonials .testimonial {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        #testimonials .testimonial img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+        footer {
+            background: #ff531a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer .pool {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        footer ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+        footer ul li {
+            margin: 0 10px;
+        }
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .modal-content {
+            margin: 10% auto;
+            display: block;
+            max-width: 80%;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="pool">
+            <h1>HB Custom BBQ Grills</h1>
+            <nav>
+            <ul>
+                    <li><a href="#offer">What We Offer</a></li>
+                    <li><a href="#previous">Previous Projects</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contacts</a></li>
+        </ul>
+        </nav>
+        </div>
+    </header>
+    <section id="main">
+        <div class="pool">
+        <h2>Create Your Own Custom BBQ Island With the Best!</h2>
+        </div>
+    </section>
+    <section id="offer">
+        <div class="pool">
+        <h2>What We Offer</h2>
+        <div class="offer">
+                <img src="luxor.jpg" alt="High-Quality Materials">
+                <h3>High-Quality Materials</h3>
+                <p>Our BBQ islands are crafted from premium materials to ensure maximum longevity and durability.</p>
+            </div>
+            <div class="offer">
+            <img src="long.jpg" alt="Customizable Designs"> 
+            <h3>Customizable Designs</h3>
+            <p>You pick your own design and we create it!</p>
+            </div>
+        </div>
+    </section>
+    <section id="previous">
+        <div class="pool">
+            <h2>Previous Projects</h2>
+            <div class="previous-item"><img src="hbcustom1.jpg" alt="previous 1"> </div>
+            <div class="previous-item"><img src="hbcustom2.jpg" alt="previous 2"> </div>
+            <div class="previous-item"><img src="hbcustom3.jpg" alt="previous 3"> </div>
+    </div>
+    </section>
+    <section id="testimonials">
+        <div class="pool">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"Picasso of grilling 🙌" - Ara Pirjanian</p>
+                <p>"The Best in the Biz…. 👍❤️❤️ - Allen Vartanian</p>
+        </div>
+        </div>
+    </section>
+    <footer id="contact">
+        <div class="pool">
+            <b><p style="color:black;">Contact us: (818) 640-6636 | info@hbcustombbqgrills.com</p></b>
+            <p style="color:black;"><b>Follow or Book us on social media:<b></p>
+            <ul>
+            <li><a href="https://www.instagram.com/hbcustombbqgrills/?igshid=1obo6f84q0tno"style="color:black;"><b>Instagram<b></a></li>
+            </ul>
+        </div>
+    </footer>
+    <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("img01");
+            const images = document.querySelectorAll("img");
+            const closeModal = document.querySelector(".close");
+            images.forEach(img => {
+                img.addEventListener("click", () => {
+                    if (img.src.endsWith(".jpg")) {
+                        modal.style.display = "block";
+                        modalImg.src = img.src;
+                    }
+                });
+            });
+            closeModal.addEventListener("click", () => {
+                modal.style.display = "none";
+            });
+        });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
